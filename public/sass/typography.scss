@@ -1,0 +1,104 @@
+.fw-bold{
+    color: $color-secondary-dark;
+}
+
+h2 ,.fw-bold{
+    margin-bottom: 20px;
+    color: rgb(39, 39, 39);
+}
+
+.carousel-item{
+    width: 100%;
+    max-width: 800px;
+    height: 450px;
+    & img{
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+    }
+    @media (max-width:600px) {
+        height: 350px;
+    }
+    @media (max-width:400px) {
+        height: 250px;
+    }
+}
+
+.carousel-inner{
+    width: 700px;
+    @media (max-width:600px) {
+        width: 100%;
+    }
+}
+
+
+.journey-cards-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    min-height: 500px;
+}
+
+.up{
+    align-self: flex-start;
+}
+
+.down{
+    align-self: flex-end;
+}
+
+.journey-card{
+    width: 250px;
+    height: 250px;
+    border-radius: 8px;
+    background-color: $color-primary;
+    color: white;
+    position: relative;
+    margin: 30px;
+    z-index: -1;
+    & .title{
+        display: flex;
+        justify-content: space-between;
+        margin: 12px 20px;
+        font-size: 24px;
+        & .id{
+            vertical-align: middle;
+            text-align: center;
+            height: auto;
+            font-weight: 900;
+            font-size: 28px;
+        }
+    }
+
+    & .journey-list{
+        list-style: none;
+        font-size: 20px;
+        z-index: 99;
+        list-style-type: circle;
+    }
+
+    & .journey-card-img{
+        // width: 150px;
+        height: 120px;
+        position: absolute;
+        right: -30px;
+        bottom: -30px;
+        z-index: -1;
+    }
+}
+
+
+.footer-text{
+    color: #BDD9ED;
+}
+
+footer{
+    margin-top: auto;
+    // position: absolute;
+    // bottom: 0;
+    width: 100%;
+    & h3{
+        font-size: 24px;
+        font-weight: bold;
+    }
+}

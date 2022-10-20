@@ -1,0 +1,24 @@
+.card-carousel{
+    padding: 30px;
+    margin: auto;
+
+    & .testemony-container{
+        cursor: default;
+        margin-right: 30px;
+        height: 250px;
+        max-width: 340px;
+        & p{
+            cursor: default;
+            user-select: none;
+        }
+    }
+}
+
+.card-carousel-container{
+    width: 60vw;
+    overflow: hidden;
+    margin: auto;
+    @media (max-width:600px) {
+        width: 90vw;
+    }
+}
