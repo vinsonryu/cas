@@ -21,7 +21,7 @@ app.get('/',(req,res)=>{
 app.post("/mail",async (req,res)=> {
     const {name,email} = req.body;
 
-    const subject = "testing email sending function";
+    const subject = "emails from caseducation website";
     const text = "username:"+name;
     sendMail(name, email, subject, text, function(err, data) {
         if (err) {
