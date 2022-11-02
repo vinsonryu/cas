@@ -1,5 +1,6 @@
 import express from 'express';
 import { addCustomer } from './firebase.utils.js';
+import sendMail from './mail.js';
 const app = express();
 
 
@@ -17,9 +18,17 @@ app.get('/',(req,res)=>{
     res.render('index')
 });
 
-app.post("/",async (req,res)=> {
+app.post("/mail",async (req,res)=> {
     const {name,email} = req.body;
-    addCustomer(email,name)
+    const subject = "testing email sending function";
+    const text = "this is sample text for testing purposes";
+    sendMail(name, email, subject, text, function(err, data) {
+        if (err) {
+            res.status(500).json({ message: 'Internal Error' });
+        } else {
+            res.status({ message: 'Email sent!!!' });
+        }
+    });
     res.redirect('/');
 })
 const PORT = process.env.PORT || 3000;
