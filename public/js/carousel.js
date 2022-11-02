@@ -8,7 +8,7 @@ const slider = tns(
         "speed": 400,
         "controls": false,
         // "autoplay":true,
-        "lazyload": true,
+        // "lazyload": true,
         "fixedWidth": 350,
         "nav":false,
         "responsive": {
