@@ -1,4 +1,5 @@
-const express = require('express');
+import express from 'express';
+import { addCustomer } from './firebase.utils.js';
 const app = express();
 
 
@@ -17,8 +18,9 @@ app.get('/',(req,res)=>{
 });
 
 app.post("/",async (req,res)=> {
-
-  res.redirect('/');
+    const {name,email} = req.body;
+    addCustomer(email,name)
+    res.redirect('/');
 })
 const PORT = process.env.PORT || 3000;
 app.listen(PORT,(error)=>{
