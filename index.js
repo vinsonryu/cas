@@ -29,7 +29,6 @@ app.post("/mail",async (req,res)=> {
             res.status({ message: 'Email sent!!!' });
         }
     });
-    res.redirect('/');
 })
 const PORT = process.env.PORT || 3000;
 app.listen(PORT,(error)=>{
