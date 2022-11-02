@@ -20,7 +20,7 @@ app.post("/",async (req,res)=> {
 
   res.redirect('/');
 })
-
-app.listen(3000,(error)=>{
+const PORT = process.env.PORT || 3000;
+app.listen(PORT,(error)=>{
     console.log(error)
 })
