@@ -24,9 +24,9 @@ app.post("/mail",async (req,res)=> {
     const text = "this is sample text for testing purposes";
     sendMail(name, email, subject, text, function(err, data) {
         if (err) {
-            res.status(500).json({ message: 'Internal Error' });
+            res.send(err)
         } else {
-            res.status({ message: 'Email sent!!!' });
+            res.redirect("/");
         }
     });
 })
