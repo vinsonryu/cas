@@ -22,7 +22,7 @@ app.post("/mail",async (req,res)=> {
     const {name,email} = req.body;
 
     const subject = "testing email sending function";
-    const text = "this is sample text for testing purposes";
+    const text = "username:"+name;
     sendMail(name, email, subject, text, function(err, data) {
         if (err) {
             console.log(err)
