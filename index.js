@@ -18,6 +18,11 @@ app.get('/',(req,res)=>{
     res.render('index')
 });
 
+app.get('/testemonials',(req,res)=>{
+    res.render('testemonials')
+});
+
+
 app.post("/mail",async (req,res)=> {
     const {name,email} = req.body;
 

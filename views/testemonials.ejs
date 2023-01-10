@@ -1,0 +1,19 @@
+<%- include('header') %> 
+
+
+<h2 class="heading">Testemonials from our users</h2>
+<div class="testemonials-container">
+    <% for( let i = 3; i < 6; i++ ) { %>
+    
+        <div class="card">
+            <img class="card-img" src="img/carousel/c<%= i %>.png" alt="">
+            <div class="card-body">
+                <h4 class="card-title">Title</h4>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita praesentium nulla similique, cumque nihil quasi voluptatem. Sint perferendis recusandae vitae excepturi velit, qui sit voluptatem error, repudiandae esse quae placeat?</p>
+            </div>
+        </div>
+
+    <% } %>
+</div>
+
+<%- include('footer') %> 

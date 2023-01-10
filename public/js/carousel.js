@@ -11,6 +11,8 @@ const slider = tns(
         // "lazyload": true,
         "fixedWidth": 350,
         "nav":false,
+        "autoplay": true,
+        "autoplayButtonOutput": false,
         "responsive": {
             600:{
                 "items":2

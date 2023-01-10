@@ -9,7 +9,7 @@ h2 ,.fw-bold{
 
 .carousel-item{
     width: 100%;
-    max-width: 800px;
+    // max-width: 800px;
     height: 450px;
     & img{
         width: 100%;
@@ -24,62 +24,66 @@ h2 ,.fw-bold{
     }
 }
 
-.carousel-inner{
-    width: 700px;
-    @media (max-width:600px) {
-        width: 100%;
-    }
-}
 
+.cinner-2{
+    width: 70vw;
+}
 
 .journey-cards-container{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     min-height: 500px;
+    gap: 50px;
+    width: 90vw;
+    margin: auto;
+    margin-top: 50px;
 }
 
 .up{
     align-self: flex-start;
+    background:linear-gradient(135deg, #0cd6ba 0%,#036ED9 100%);
 }
 
 .down{
     align-self: flex-end;
+    background:linear-gradient(135deg, #0cd6ba 0%,#036ED9 100%);
 }
-
+.j-text {
+    color: #083663;
+}
 .journey-card{
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     border-radius: 8px;
-    background-color: $color-primary;
     color: white;
     position: relative;
-    margin: 30px;
     z-index: -1;
     & .title{
         display: flex;
         justify-content: space-between;
         margin: 12px 20px;
-        font-size: 24px;
+        font-size: 20px;
+        font-weight: 700;
         & .id{
             vertical-align: middle;
             text-align: center;
             height: auto;
             font-weight: 900;
-            font-size: 28px;
+            font-size: 24px;
         }
     }
 
     & .journey-list{
         list-style: none;
-        font-size: 20px;
+        font-size: 16px;
         z-index: 99;
         list-style-type: circle;
     }
 
     & .journey-card-img{
         // width: 150px;
-        height: 120px;
+        height: 100px;
         position: absolute;
         right: -30px;
         bottom: -30px;
@@ -90,6 +94,7 @@ h2 ,.fw-bold{
 
 .footer-text{
     color: #BDD9ED;
+    text-align: justify;
 }
 
 footer{
@@ -100,5 +105,9 @@ footer{
     & h3{
         font-size: 24px;
         font-weight: bold;
+        text-align: left;
+    }
+    & div {
+        margin-top: 10px;
     }
 }

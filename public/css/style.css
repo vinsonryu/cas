@@ -16,18 +16,23 @@ body {
   .navbar a {
     text-decoration: none; }
 
+.nav-item:hover {
+  color: #064469;
+  font-weight: bold; }
+
 .header {
   min-height: 90vh;
-  width: 90vw;
+  width: 80vw;
   display: flex;
+  gap: 50px;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-wrap: wrap;
   padding: 100px 0;
   margin: auto; }
   .header .hero-content {
-    width: 40%; }
+    width: 44%; }
     @media (max-width: 950px) {
       .header .hero-content {
         width: 70vw; } }
@@ -38,7 +43,7 @@ body {
     .header {
       padding: 25px; } }
   .header h1 {
-    font-size: 64px;
+    font-size: 56px;
     font-family: 'inter';
     font-weight: 900;
     letter-spacing: 0px;
@@ -68,6 +73,8 @@ body {
     @media (max-width: 450px) {
       .header .carousel {
         width: 90vw; } }
+    .header .carousel .carousel-inner {
+      width: 100%; }
   @media (max-width: 450px) {
     .header button {
       margin-bottom: 10px; } }
@@ -104,57 +111,19 @@ p {
 .brand-img {
   width: 80px; }
 
+.tests-section {
+  width: 70%;
+  margin: 100px auto; }
+
 .card-list {
   display: flex;
   flex-wrap: wrap;
   width: 80vw;
   margin: auto;
   justify-content: space-around; }
-
-.courses-section {
-  margin: 100px 0; }
-  @media (max-width: 600px) {
-    .courses-section {
-      margin: 10px; } }
-
-.course-card-container {
-  width: 70%;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around; }
-  .course-card-container .course-card {
-    width: 150px;
-    height: 150px;
-    box-shadow: 3px 5px 9px rgba(201, 201, 201, 0.25);
-    border-radius: 5px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
-    font-weight: bold;
-    position: relative; }
-    .course-card-container .course-card img {
-      height: 100%;
-      width: 100%; }
-    .course-card-container .course-card p {
-      position: absolute;
-      bottom: 10px;
-      color: aliceblue; }
-    @media (max-width: 600px) {
-      .course-card-container .course-card {
-        margin-bottom: 10px; } }
-  @media (max-width: 600px) {
-    .course-card-container {
-      margin: 10px;
-      width: 90%;
-      justify-content: space-between; } }
-
-.tests-section {
-  width: 70%;
-  margin: 100px auto; }
+  @media (max-width: 500px) {
+    .card-list {
+      width: 100vw; } }
 
 .tests-container {
   width: 100%;
@@ -196,7 +165,7 @@ p {
 
 .teacher-card {
   width: 280px;
-  height: 450px;
+  height: auto;
   border: none;
   margin: 10px 20px;
   padding: 20px 15px;
@@ -217,11 +186,13 @@ p {
     color: #4b4b4b;
     margin-left: 5px; }
   .teacher-card img {
-    width: 100%;
-    max-height: 50%;
-    border-radius: 5px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
     object-fit: cover;
     object-position: top;
+    margin: auto;
+    margin-top: 10px;
     margin-bottom: 5px; }
   .teacher-card:hover {
     box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px; }
@@ -277,12 +248,11 @@ input {
   @media (max-width: 500px) {
     .testemony-container {
       margin: auto; } }
-
-.testemony-container img {
-  width: 50px;
-  height: 50px;
-  margin-right: 15px;
-}
+  .testemony-container img {
+    width: 70px;
+    height: 70px; }
+  .testemony-container .t-card {
+    gap: 10px; }
 
 footer {
   background-color: #064469;
@@ -301,7 +271,6 @@ h2, .fw-bold {
 
 .carousel-item {
   width: 100%;
-  max-width: 800px;
   height: 450px; }
   .carousel-item img {
     width: 100%;
@@ -314,65 +283,74 @@ h2, .fw-bold {
     .carousel-item {
       height: 250px; } }
 
-.carousel-inner {
-  width: 700px; }
-  @media (max-width: 600px) {
-    .carousel-inner {
-      width: 100%; } }
+.cinner-2 {
+  width: 70vw; }
 
 .journey-cards-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  min-height: 500px; }
+  justify-content: center;
+  min-height: 500px;
+  gap: 50px;
+  width: 90vw;
+  margin: auto;
+  margin-top: 50px; }
 
 .up {
-  align-self: flex-start; }
+  align-self: flex-start;
+  background: linear-gradient(135deg, #0cd6ba 0%, #036ED9 100%); }
 
 .down {
-  align-self: flex-end; }
+  align-self: flex-end;
+  background: linear-gradient(135deg, #0cd6ba 0%, #036ED9 100%); }
+
+.j-text {
+  color: #083663; }
 
 .journey-card {
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   border-radius: 8px;
-  background-color: #064469;
   color: white;
   position: relative;
-  margin: 30px;
   z-index: -1; }
   .journey-card .title {
     display: flex;
     justify-content: space-between;
     margin: 12px 20px;
-    font-size: 24px; }
+    font-size: 20px;
+    font-weight: 700; }
     .journey-card .title .id {
       vertical-align: middle;
       text-align: center;
       height: auto;
       font-weight: 900;
-      font-size: 28px; }
+      font-size: 24px; }
   .journey-card .journey-list {
     list-style: none;
-    font-size: 20px;
+    font-size: 16px;
     z-index: 99;
     list-style-type: circle; }
   .journey-card .journey-card-img {
-    height: 120px;
+    height: 100px;
     position: absolute;
     right: -30px;
     bottom: -30px;
     z-index: -1; }
 
 .footer-text {
-  color: #BDD9ED; }
+  color: #BDD9ED;
+  text-align: justify; }
 
 footer {
   margin-top: auto;
   width: 100%; }
   footer h3 {
     font-size: 24px;
-    font-weight: bold; }
+    font-weight: bold;
+    text-align: left; }
+  footer div {
+    margin-top: 10px; }
 
 .card-carousel {
   padding: 30px;
@@ -393,3 +371,28 @@ footer {
   @media (max-width: 600px) {
     .card-carousel-container {
       width: 90vw; } }
+
+.testemonials-container {
+  width: 90vw;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap; }
+  .testemonials-container .card {
+    width: 30%;
+    max-width: 400px;
+    min-width: 270px;
+    height: auto;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; }
+    .testemonials-container .card img {
+      height: 200px; }
+    .testemonials-container .card .card-body {
+      padding: 20px; }
+
+.heading {
+  margin-left: 5vw;
+  margin-top: 50px;
+  font-weight: bold; }

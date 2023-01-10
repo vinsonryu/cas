@@ -22,21 +22,27 @@ body{
         text-decoration: none;
     }
 }
-
+.nav-item {
+    &:hover{
+        color: $color-primary;
+        font-weight: bold;
+    }
+}
 // header
 .header{
     min-height: 90vh;
-    width: 90vw;
+    width: 80vw;
     display: flex;
+    gap: 50px;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-wrap: wrap;
     padding: 100px 0;
     margin: auto;
 
     & .hero-content{
-        width: 40%;
+        width: 44%;
         @media (max-width:950px) {
             width: 70vw;
         }
@@ -48,7 +54,7 @@ body{
         padding: 25px;
     }
     & h1{
-        font-size: 64px;
+        font-size: 56px;
         font-family: 'inter';
         font-weight: 900;
         letter-spacing: 0px;
@@ -82,7 +88,11 @@ body{
         @media (max-width:450px) {
             width: 90vw;
         }
+        & .carousel-inner{
+            width: 100%;
+        }
     }
+    
     & button {
         
         @media (max-width:450px) {
@@ -133,64 +143,6 @@ p{
 
 }
 
-.card-list {
-    display: flex;
-    flex-wrap: wrap;
-    width: 80vw;
-    margin: auto;
-    justify-content: space-around;
-  }
-
-
-
-// courses
-
-.courses-section {
-    margin: 100px 0;
-    @media (max-width:600px) {
-        margin: 10px;
-    }
-}
-.course-card-container{
-    width: 70%;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    & .course-card{
-        width: 150px;
-        height: 150px;
-        box-shadow: 3px 5px 9px rgba(201, 201, 201, 0.25);
-        border-radius: 5px;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        font-size: 16px;
-        font-weight: bold;
-        // padding-bottom: 10px;
-        position: relative;
-        & img {
-            height: 100%;
-            width: 100%;
-        }
-        & p {
-            position: absolute;
-            bottom: 10px;
-            color: aliceblue;
-        }
-        @media (max-width:600px) {
-            margin-bottom: 10px;
-        }
-    }
-    @media (max-width:600px) {
-        margin: 10px;
-        width: 90%;
-        justify-content: space-between;
-    }
-}
-
 
 
 
@@ -199,6 +151,17 @@ p{
     width: 70%;
     margin: 100px auto;
 }
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80vw;
+    margin: auto;
+    justify-content: space-around;
+    @media (max-width:500px) {
+        width: 100vw;
+    }
+  }
+
 .tests-container{
     width: 100%;
     margin: auto;
@@ -243,7 +206,7 @@ p{
 }
 .teacher-card{
     width: 280px;
-    height: 450px;
+    height: auto;
     border: none;
     margin: 10px 20px;
     padding: 20px 15px;
@@ -267,11 +230,13 @@ p{
         margin-left: 5px;
     }
     & img{
-      width: 100%;
-      max-height: 50%;
-      border-radius: 5px;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
       object-fit: cover;
       object-position: top;
+      margin: auto;
+      margin-top: 10px;
       margin-bottom: 5px;
     }
     &:hover{
@@ -343,6 +308,13 @@ input {
     border-radius: 10px;
     @media (max-width:500px) {
         margin: auto;
+    }
+    & img{
+        width: 70px;
+        height: 70px;
+    }
+    & .t-card {
+        gap: 10px
     }
 }
 
