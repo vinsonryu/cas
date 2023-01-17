@@ -22,15 +22,16 @@ body {
 
 .header {
   min-height: 90vh;
-  width: 80vw;
+  max-width: 100vw;
   display: flex;
   gap: 50px;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 100px 0;
-  margin: auto; }
+  margin: auto;
+  background-image: url("../img/herobg.png");
+  background-size: cover; }
   .header .hero-content {
     width: 44%; }
     @media (max-width: 950px) {
@@ -109,42 +110,8 @@ p {
   margin: 0; }
 
 .brand-img {
-  width: 80px; }
-
-.tests-section {
-  width: 70%;
-  margin: 100px auto; }
-
-.card-list {
-  display: flex;
-  flex-wrap: wrap;
-  width: 80vw;
-  margin: auto;
-  justify-content: space-around; }
-  @media (max-width: 500px) {
-    .card-list {
-      width: 100vw; } }
-
-.tests-container {
-  width: 100%;
-  margin: auto;
-  margin-top: 50px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around; }
-  .tests-container .test-card {
-    width: 250px;
-    height: 80px;
-    box-shadow: 3px 5px 9px rgba(201, 201, 201, 0.25);
-    border-radius: 14px;
-    text-align: center;
-    padding: 15px;
-    font-weight: 600;
-    color: #4b4b4b;
-    margin-bottom: 15px; }
-    .tests-container .test-card:hover {
-      box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
-      cursor: pointer; }
+  height: 100%;
+  transform: scale(1.5); }
 
 .teacher-cards-section {
   margin: 100px 0; }
@@ -304,9 +271,6 @@ h2, .fw-bold {
   align-self: flex-end;
   background: linear-gradient(135deg, #0cd6ba 0%, #036ED9 100%); }
 
-.j-text {
-  color: #083663; }
-
 .journey-card {
   width: 200px;
   height: 200px;
@@ -396,3 +360,72 @@ footer {
   margin-left: 5vw;
   margin-top: 50px;
   font-weight: bold; }
+
+.tests-section {
+  width: 70%;
+  margin: 100px auto; }
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80vw;
+  margin: auto;
+  justify-content: space-around; }
+  @media (max-width: 500px) {
+    .card-list {
+      width: 100vw; } }
+
+.tests-container {
+  width: 100%;
+  margin: auto;
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+  .tests-container .test-card {
+    width: 250px;
+    height: 80px;
+    box-shadow: 3px 5px 9px rgba(201, 201, 201, 0.25);
+    border-radius: 14px;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+    color: #4b4b4b;
+    margin-bottom: 15px; }
+    .tests-container .test-card-more {
+      width: 250px;
+      height: 80px;
+      box-shadow: 3px 5px 9px rgba(201, 201, 201, 0.25);
+      border-radius: 14px;
+      text-align: center;
+      padding: 15px;
+      font-weight: 600;
+      color: #4b4b4b;
+      margin-bottom: 15px; }
+      .tests-container .test-card-more:hover {
+        box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+        cursor: pointer; }
+    .tests-container .test-card:hover {
+      box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+      cursor: pointer; }
+
+.test-card {
+  position: relative; }
+  .test-card-inner {
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transform: translateY(-120px);
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 3px solid #e4e4e4;
+    text-align: justify; }
+  .test-card:hover {
+    height: auto;
+    transition: all 1s; }
+    .test-card:hover .test-card-inner {
+      opacity: 1;
+      position: initial;
+      transform: translateY(0px);
+      transition: all .5s; }

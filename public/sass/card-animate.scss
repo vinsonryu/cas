@@ -1,0 +1,89 @@
+// tests
+.tests-section{
+    width: 70%;
+    margin: 100px auto;
+}
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80vw;
+    margin: auto;
+    justify-content: space-around;
+    @media (max-width:500px) {
+        width: 100vw;
+    }
+  }
+
+.tests-container{
+    width: 100%;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    & .test-card{
+        width: 250px;
+        height: 80px;
+        box-shadow: 3px 5px 9px rgba(201, 201, 201, 0.25);
+        border-radius: 14px;
+        text-align: center;
+        padding: 15px;
+        font-weight: 600;
+        color: $color-grey-dark-3;
+        margin-bottom: 15px;
+        &-more{
+            width: 250px;
+            height: 80px;
+            box-shadow: 3px 5px 9px rgba(201, 201, 201, 0.25);
+            border-radius: 14px;
+            text-align: center;
+            padding: 15px;
+            font-weight: 600;
+            color: $color-grey-dark-3;
+            margin-bottom: 15px;
+            &:hover{
+                box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+                cursor: pointer;
+            }
+        }
+        &:hover{
+            box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+            cursor: pointer;
+        }
+    }
+}
+
+.test-card{
+    position: relative;
+    & input {
+        // position: absolute;
+        // width: 100%;
+        // height: 100%;
+        // top: 0;
+        // left: 0;
+        // // opacity: 0;
+    }
+    &-inner{
+        // display: none;
+        opacity: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        transform: translateY(-120px);
+        margin-top: 20px;
+        padding-top: 10px;
+        border-top: 3px solid rgb(228, 228, 228);
+        text-align: justify;
+    }
+    &:hover{
+        height: auto;
+        transition: all 1s;
+        .test-card-inner{
+            // display: block;
+            opacity: 1;
+            position: initial;
+            transform: translateY(0px);
+            transition: all .5s;
+        }
+    }
+}
